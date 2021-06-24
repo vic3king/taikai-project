@@ -14,7 +14,7 @@ This project is built with NodeJs(ES6), Express and a sprinkle of other supporti
 - npm run start:dev to launch development server and access endpoints e.g [localhost:3000/v1](http://127.0.0.1:3000)
 ```
 
-Hosted api can be found [here]([click to view](https://taikai-project.herokuapp.com/))
+Hosted api can be found here [click to view](https://taikai-project.herokuapp.com/)
 
 
 ## API Endpoints
@@ -68,7 +68,7 @@ Hosted api can be found [here]([click to view](https://taikai-project.herokuapp.
 
 ## Entity Relationship diagram
 
-![ERD]([click to view](https://github.com/vic3king/taikai-project/blob/master/Screenshot%202021-06-24%20at%2011.27.22.png)) Schema Diagram
+Schema Diagram can be found here [click to view](https://github.com/vic3king/taikai-project/blob/master/Screenshot%202021-06-24%20at%2011.27.22.png)
 
 ## Technologies
 

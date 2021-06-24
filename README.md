@@ -2,7 +2,7 @@
 
 Is an open job board API
 
-This project is built with NodeJs(ES6) and Express and a sprinkle of other supporting cases. see technologies section for more details.
+This project is built with NodeJs(ES6), Express and a sprinkle of other supporting cases. see technologies section for more details.
 
 ## Setup
 

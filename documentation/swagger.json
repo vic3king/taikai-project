@@ -1,0 +1,286 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Taikai",
+    "description": "Taikai - ",
+    "version": "1.0",
+    "contact": {
+      "email": "vic3coorp@gmail.com"
+    }
+  },
+  "host": "localhost:3000",
+  "basePath": "/v1",
+  "tags": [
+    {
+      "name": "User",
+      "description": "User routes"
+    },
+    {
+      "name": "Jobs",
+      "description": "Job routes"
+    }
+  ],
+  "schemes": ["http"],
+  "paths": {
+    "/users/create": {
+      "post": {
+        "tags": ["User"],
+        "summary": "POST API endpoint for creating and subscribing new users",
+        "produces": ["application/json"],
+        "consumes": ["application/x-www-form-urlencoded"],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "formData",
+            "description": "email of the user",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "409": {
+            "description": "Already exists"
+          },
+          "500": {
+            "description": "DB error"
+          }
+        }
+      }
+    },
+    "/users/toggle-subscription": {
+      "post": {
+        "tags": ["User"],
+        "summary": "PATCH API endpoint for unsubscribing and subscribing existing users",
+        "produces": ["application/json"],
+        "consumes": ["application/x-www-form-urlencoded"],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "formData",
+            "description": "email of the user",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "isSubscribed",
+            "in": "formData",
+            "description": "boolean value to describe the toggle you want",
+            "required": true,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "409": {
+            "description": "Already exists"
+          },
+          "500": {
+            "description": "DB error"
+          }
+        }
+      }
+    },
+    "/jobs": {
+      "post": {
+        "tags": ["Jobs"],
+        "summary": "POST API endpoint for adding new job offers",
+        "produces": ["application/json"],
+        "consumes": ["application/x-www-form-urlencoded"],
+        "parameters": [
+          {
+            "name": "description",
+            "in": "formData",
+            "description": "job description",
+            "required": true,
+            "type": "sting"
+          },
+          {
+            "name": "title",
+            "in": "formData",
+            "description": "job title",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "recruiter",
+            "in": "formData",
+            "description": "job recruiter",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "recruiter",
+            "in": "formData",
+            "description": "job recruiter",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "recruiterContact",
+            "in": "formData",
+            "description": "job recruiterContact",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "numberOfHires",
+            "in": "formData",
+            "description": "job numberOfHires",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "numberOfHires",
+            "in": "formData",
+            "description": "job numberOfHires",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "locationId",
+            "in": "formData",
+            "description": "job locationId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "typeId",
+            "in": "formData",
+            "description": "job typeId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "skillId",
+            "in": "formData",
+            "description": "job skillId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "409": {
+            "description": "Already exists"
+          },
+          "500": {
+            "description": "DB error"
+          }
+        }
+      },
+      "get": {
+        "tags": ["Jobs"],
+        "summary": "GET API endpoint for retrieving job openings",
+        "produces": ["application/json"],
+        "consumes": ["application/x-www-form-urlencoded"],
+        "parameters": [
+          {
+            "name": "active",
+            "in": "path",
+            "description": "job description",
+            "required": false,
+            "type": "boolean"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          },
+          "500": {
+            "description": "DB error"
+          }
+        }
+      }
+    },
+    "/jobs/{jobId}": {
+      "patch": {
+        "tags": ["Jobs"],
+        "summary": "updates an existing job opening",
+        "produces": ["application/json"],
+        "consumes": ["application/x-www-form-urlencoded"],
+        "parameters": [
+          {
+            "name": "jobId",
+            "in": "path",
+            "description": "jobId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "in": "formData",
+            "description": "job description",
+            "required": true,
+            "type": "boolestringan"
+          },
+          {
+            "name": "title",
+            "in": "formData",
+            "description": "job title",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "500": {
+            "description": "DB error"
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Jobs"],
+        "summary": "deletes an existing job opening",
+        "produces": ["application/json"],
+        "consumes": ["application/x-www-form-urlencoded"],
+        "parameters": [
+          {
+            "name": "jobId",
+            "in": "path",
+            "description": "jobId",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "500": {
+            "description": "DB error"
+          }
+        }
+      }
+    }
+  }
+}

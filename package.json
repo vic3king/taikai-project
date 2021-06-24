@@ -15,7 +15,7 @@
     "migrate:reset": "npx sequelize-cli db:migrate:undo:all && npm run migrate",
     "test": "cross-env NODE_ENV=test jest --coverage --testTimeout=20000",
     "pretest": "cross-env NODE_ENV=test npm run migrate:reset && npm run seed",
-    "prod:reset": "heroku run sequelize db:migrate:undo:all --app salty-journey-62723 && heroku run sequelize db:migrate --app salty-journey-62723 && heroku run sequelize db:seed:all --app salty-journey-62723 ",
+    "prod:reset": "heroku run sequelize db:migrate:undo:all --app taikai-project && heroku run sequelize db:migrate --app taikai-project && heroku run sequelize db:seed:all --app taikai-project ",
     "eslint:fix": "eslint --fix server/",
     "prettier:check": "prettier --check \"./**/*.js\"",
     "prettier:fix": "prettier --write \"./**/*.js\"",

@@ -14,7 +14,7 @@ This project is built with NodeJs(ES6) and Express and a sprinkle of other suppo
 - npm run start:dev to launch development server and access endpoints e.g [localhost:3000/v1](http://127.0.0.1:3000)
 ```
 
-Hosted api can be found [here](coming up)
+Hosted api can be found [here]([coming up](https://taikai-project.herokuapp.com/))
 
 
 ## API Endpoints
@@ -68,7 +68,7 @@ Hosted api can be found [here](coming up)
 
 ## Entity Relationship diagram
 
-![entity relationship diagram](coming up)
+![ERD]([coming up](https://github.com/vic3king/taikai-project/blob/master/Screenshot%202021-06-24%20at%2011.27.22.png)) Schema Diagram
 
 ## Technologies
 
@@ -97,5 +97,3 @@ Hosted api can be found [here](coming up)
 ## Authors
 
 - **Akaniru Victory** - _Initial work_ - [Vic3King](www.vic3king.io)
-
-See also the list of [contributors](https://github.com/Hurntre/SendIT/graphs/contributors) who participated in this project.

@@ -8,7 +8,7 @@
       "email": "vic3coorp@gmail.com"
     }
   },
-  "host": "localhost:3000",
+  "host": "https://taikai-project.herokuapp.com",
   "basePath": "/v1",
   "tags": [
     {

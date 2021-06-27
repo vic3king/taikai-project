@@ -14,6 +14,12 @@ This project is built with NodeJs(ES6), Express and a sprinkle of other supporti
 - npm run start:dev to launch development server and access endpoints e.g [localhost:3000/v1](http://127.0.0.1:3000)
 ```
 
+## Test
+
+```bash
+To run tests, run the command npm run test
+```
+
 Hosted api can be found here [click to view](https://taikai-project.herokuapp.com/)
 
 

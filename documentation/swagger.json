@@ -8,7 +8,7 @@
       "email": "vic3coorp@gmail.com"
     }
   },
-  "host": "https://taikai-project.herokuapp.com",
+  "host": "taikai-project.herokuapp.com",
   "basePath": "/v1",
   "tags": [
     {
@@ -20,7 +20,7 @@
       "description": "Job routes"
     }
   ],
-  "schemes": ["http"],
+  "schemes": ["https"],
   "paths": {
     "/users/create": {
       "post": {
